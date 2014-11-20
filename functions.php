@@ -3,11 +3,11 @@
 /*
  * Boot WP functions.php
  * By Antoine Cadoret
- * Last update: 30/03/2014
+ * Last update: 20/11/2014
  */
 
 // Add a page with ALL Wordpress options
-function add_all_general_settings_link(){ add_options_page(__('All Settings'), __('All Settings'), 'administrator', 'options.php'); }
+function add_all_general_settings_link(){ add_options_page(__('Tous les paramètres'), __('Tous les paramètres'), 'administrator', 'options.php'); }
 add_action('admin_menu', 'add_all_general_settings_link');
 
 // Enable Thumbnails support
