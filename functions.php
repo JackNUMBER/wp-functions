@@ -165,8 +165,8 @@ function main_image(){
 }
 
 // Add shortcode
-function short_intro($atts, $content='') {
-    return '<div class="intro">'.$content.'</div>';
+function short_intro($atts, $content = '') {
+    return '<div class="intro">' . $content . '</div>';
 }
 add_shortcode('intro', 'short_intro'); /* [intro]content[/intro] */
 
