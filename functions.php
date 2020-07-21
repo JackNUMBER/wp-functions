@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Boot WP functions.php
+ * Wordpress boilerplate functions.php
  * By Antoine Cadoret
- * Last update: 20/11/2014
+ * Last update: 21/07/2020
  */
 
 // Add a page with ALL Wordpress options
@@ -44,9 +44,12 @@ function cpt_in_feed($request) {
 }
 add_filter('request', 'cpt_in_feed');
 
+// Add CSS file with version
+wp_enqueue_style('main', get_template_directory_uri() . '/css/main.min.css', array(), filemtime(get_stylesheet_directory() . '/css/main.min.css'));
+
 // Custom back-office styles
 function custom_back_office(){
-    $admin_handle = 'admin_css';
+    $admin_handle = 'admin';
     $admin_stylesheet = get_template_directory_uri() . '/back/back.css';
     wp_enqueue_style($admin_handle, $admin_stylesheet);
 }
